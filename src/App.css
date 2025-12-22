@@ -1,0 +1,52 @@
+/* 🌸 Wedding Color Palette */
+:root {
+  --pastel-yellow: #fff6cc;
+  --beetroot-red: #7a1e3a;
+  --soft-rose: #f3d6de;
+  --dark-text: #3a0f1e;
+}
+
+/* Smooth fonts fallback */
+body {
+  font-family: "Poppins", "Bid", "Kug", sans-serif;
+}
+
+@font-face {
+  font-family: "Bid";
+  src: url(../assets/fonts/Bid.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kug";
+  src: url(../assets/fonts/kug.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Wedding slideshow animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-slide {
+  animation: slide 80s linear infinite;
+}
+
+.slideshow-container:hover .slideshow-inner {
+  animation-play-state: paused;
+}
+
+/* Wedding shimmer overlay */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 3s infinite;
+}
+
